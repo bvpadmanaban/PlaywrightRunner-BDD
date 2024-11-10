@@ -1,10 +1,11 @@
 import { expect } from '@playwright/test';
-import { createBdd } from 'playwright-bdd';
+//import { createBdd } from 'playwright-bdd';
+import { Given, When, Then } from '../fixtures/bddfixtures';
 
-const { Given, When, Then } = createBdd();
+//const { Given, When, Then } = createBdd();
 
 Given('I open url {string}', async ({ page }, url) => {
-  await page.goto(url);
+  await page.goto(url);  
 });
 
 When('I click link {string}', async ({ page }, name) => {
